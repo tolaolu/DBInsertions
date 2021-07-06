@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="392.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbinsertions.FXMLController">
+   <children>
+      <VBox layoutX="14.0" layoutY="25.0" prefHeight="200.0" prefWidth="52.0" spacing="15.0">
+         <children>
+            <Label fx:id="idLabel" text="ID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="titleLabel" layoutX="10.0" layoutY="10.0" text="Title:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="authorLabel" layoutX="10.0" layoutY="42.0" text="Author:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="pagesLabel" layoutX="10.0" layoutY="74.0" text="Pages:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="yearLabel" layoutX="10.0" layoutY="106.0" text="Year:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="66.0" layoutY="25.0" prefHeight="210.0" prefWidth="256.0" spacing="10.0">
+         <children>
+            <TextField fx:id="idTextFld" />
+            <TextField fx:id="titleTxtFld" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="authorTxtFld" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="pagesTxtFld" layoutX="10.0" layoutY="60.0" />
+            <TextField fx:id="yearTxtFld" layoutX="10.0" layoutY="85.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="booksTable" layoutX="336.0" layoutY="14.0" onMouseClicked="#onMouseClicked" prefHeight="301.0" prefWidth="418.0">
+        <columns>
+          <TableColumn fx:id="tblIdCol" prefWidth="53.0" text="Book ID" />
+          <TableColumn fx:id="tblTitleCol" prefWidth="165.0" text="Title" />
+            <TableColumn fx:id="tblAuthCol" prefWidth="109.0" text="Author" />
+            <TableColumn fx:id="tblPageCol" prefWidth="43.0" text="Pages" />
+            <TableColumn fx:id="tblYearCol" prefWidth="47.0" text="Year" />
+        </columns>
+      </TableView>
+      <Button fx:id="updateBtn" layoutX="20.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="116.0" text="UPDATE">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_update_16px_1.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="deleteBtn" layoutX="199.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="116.0" text="DELETE">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_delete_16px_1.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="insertBtn" layoutX="114.0" layoutY="276.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="116.0" text="INSERT">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_add_16px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="clearbtn" layoutX="34.0" layoutY="338.0" mnemonicParsing="false" onAction="#clearerbtnpress" prefHeight="39.0" prefWidth="298.0" text="CLEAR DETAILS">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_update_16px_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="exit" layoutX="513.0" layoutY="338.0" mnemonicParsing="false" onAction="#onExitBtnClick" prefHeight="39.0" prefWidth="116.0" text="EXIT APP">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_delete_16px_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
